@@ -1,0 +1,5 @@
+apply plugin:'java'
+dependencies{
+compile files("/home/ibrahim/Practicals/core_java/naf/nafserver/build/libs/nafserver.jar")
+compile files("/home/ibrahim/Practicals/core_java/naf/nafcommon/build/libs/nafcommon.jar")
+}
