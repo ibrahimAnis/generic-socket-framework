@@ -32,7 +32,7 @@ Add more general information about project. What the purpose of the project is? 
 Here we have implemented this framework to create a Desktop based application.
 h3. Folder Structure for Library Management System
 
-`bash
+```bash
 ├── app
     ├── dist (or build)
     
@@ -71,7 +71,7 @@ h3. Folder Structure for Library Management System
 
 └── pl`
 
-
+```
 
 
 ## Code Examples
