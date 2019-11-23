@@ -28,6 +28,58 @@ Add more general information about project. What the purpose of the project is? 
 * import packages in your code and create Main class.For more information on how to write Main class Click on below link
 * Run the Main class.
 
+## Implementation
+Here we have implemented this framework to create a Desktop based application.
+h3. Folder Structure for Library Management System
+
+```bash
+├── app
+    ├── dist (or build)
+    
+    ├── dl
+    ├── bl
+   
+    ├── iclient
+        ├── dist
+        ├── classes
+        ├── libs
+            ├── nafclient.jar
+        ├── src
+            ├── main
+               ├── java
+                  ├──com
+                     ├──library
+                        ├──com
+                        ├──com
+                        ├──com
+                        ├──com
+
+    ├── iserver
+        ├── dist
+        ├── classes
+        ├── libs
+           ├── nafserver.jar
+        ├── src
+            ├── main
+               ├── java
+                  ├──com
+                     ├──library
+                        ├──com
+                        ├──com
+                        ├──com
+                        ├──com
+
+└── pl``
+`
+
+
+
+
+
+
+
+
+
 ## Code Examples
 Show examples of usage:
 `put-your-code-here`
@@ -49,4 +101,4 @@ Project is: _in progress_, _finished_, _no longer continue_ and why?
 Add here credits. Project inspired by..., based on...
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@ibrahimAnis]() - feel free to contact me!
