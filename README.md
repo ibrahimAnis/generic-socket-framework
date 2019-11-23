@@ -22,6 +22,13 @@ Add more general information about project. What the purpose of the project is? 
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
+* 
+* * "Download":https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPKand copy the jar files to your network based application folder
+ @nafclient.jar to client folder  and @nafserver.jar to server folder.
+* Create @package.cfg file and mention the path of services folder in your application. For example
+   file:/home/ibrahim/work/naf/ in Unix/Linux and file:\\c:\\work\\naf\ in Windows
+* import packages in your code and create Main class.For more information on how to write Main class Click on below link
+* Run the Main class.
 
 ## Code Examples
 Show examples of usage:
