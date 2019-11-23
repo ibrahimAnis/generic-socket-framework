@@ -21,7 +21,7 @@ Add more general information about project. What the purpose of the project is? 
 * Tech 1 - version 1.0
 
 ## Setup 
-*"Download":https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPK and copy the jar files to your network based application folder
+*[Download](https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPK) and copy the jar files to your network based application folder
  @bin nafclient.jar @ to client folder  and @bin nafserver.jar @ to server folder.
 * Create @bin package.cfg@ file and mention the path of services folder in your application. For example
    @bin file:/home/ibrahim/work/naf//@ in Unix/Linux and @bin file:\c:\work\naf@ in Windows
