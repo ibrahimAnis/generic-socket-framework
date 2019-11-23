@@ -20,9 +20,7 @@ Add more general information about project. What the purpose of the project is? 
 ## Technologies
 * Tech 1 - version 1.0
 
-## Setup
-Describe how to install / setup your local environement / add link to demo version.
-* 
+## Setup 
 *"Download":https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPK and copy the jar files to your network based application folder
  @nafclient.jar to client folder  and @nafserver.jar to server folder.
 * Create @package.cfg file and mention the path of services folder in your application. For example
