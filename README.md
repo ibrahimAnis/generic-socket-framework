@@ -1,5 +1,5 @@
 # Generic Socket Framework
-> It is a java based framework which helps the programmers to free themselves from writing socket programming code.while creating client-server based application.
+> A java based module which helps the programmers to free themselves from writing socket programming code.while creating client-server based application.
 
 ## Table of contents
 * [General info](#general-info)
@@ -8,20 +8,20 @@
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
-
+Designing client-server based desktop application is always hectic especially writing Socket Programming code.Because in java we have to import so many modules and then create multiple instances of different socket based classes to just connect the server with client.After then we have to send the chunk of 1024 bytes.After doing all these things we could create a simple application.
+This inspired me to create a module that will save the time of programmer from writing socket programming code in Java.The programmes just have to import single module in both client and server side and they can focus on buisness logic instead of sending and receiving chunks of bytes. 
 ## Screenshots
 ![Example screenshot]()
 
 ## Technologies
-* Tech 1 - version 1.0
+* Java 1.10 or greater
 
 ## Setup 
-* [Download](https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPK) and copy the jar files to your network based application folder
+* [Download](https://drive.google.com/open?id=1jhwxy-dZDWT5k8sDxSvSmJ6iTkG-mFPK) and copy the jar files to y
+our network based application folder
  `nafclient.jar` to client folder  and `nafserver.jar` to server folder.
 * Create `package.cfg` file and mention the path of services folder in your application. For example
    `file:/home/ibrahim/work/naf/` in Unix/Linux and `file:\c:\work\naf` in Windows
@@ -29,34 +29,21 @@ Add more general information about project. What the purpose of the project is? 
 * Run the Main class.
 
 ## Implementation
-Here we have implemented this framework to create a Desktop based application.
-h3. Folder Structure for Library Management System
+Here we have implemented this appliation to create a simple client-server based application that can add,subtract,multiply two numbers.
+Folder Structure for Application is as follows:-
 
-```bash
+```
 ├── app
-    ├── dist (or build)
-    
-    ├── dl
-    ├── bl
-   
-    ├── iclient
-        ├── dist
-        ├── classes
-        ├── libs
+   ├── iclient
+       ├── libs
             ├── nafclient.jar
-        ├── src
+       ├── src
             ├── main
                ├── java
                   ├──com
-                     ├──library
-                        ├──com
-                        ├──com
-                        ├──com
-                        ├──com
-
+                     ├──app
+                        ├──App.java
     ├── iserver
-        ├── dist
-        ├── classes
         ├── libs
            ├── nafserver.jar
         ├── src
@@ -64,35 +51,83 @@ h3. Folder Structure for Library Management System
                ├── java
                   ├──com
                      ├──library
-                        ├──com
-                        ├──com
-                        ├──com
-                        ├──com
-
-└── pl`
-
+                        ├──Main.java
+                        ├──service
+                           ├── AddService.java
+                           ├──SubtractService.java
+                           ├──MultiplyService.java
+        
 ```
 
 
 ## Code Examples
 Show examples of usage:
-`put-your-code-here`
+
+Server Side Main.java to start server.
+`package com.library;
+import com.thinking.machines.nafserver.*;
+import com.thinking.machines.nafcommon.*;
+public class Main
+{
+public static void main(String gg[])
+{
+TMNAFServer tmnafserver=new TMNAFServer();   // need to construct a parameterized constructor
+tmnafserver.startServer();
+}
+}
+`
+
+AddService.java
+
+`
+package com.library.service;
+import com.thinking.machines.nafserver.annotation.*;
+@Path("/AddService")
+public class AddService
+{
+@Path("/add")
+public int add(int a,int b)
+{
+return a+b;
+}
+}
+`
+
+Client Side App.java
+
+`
+package com.app;
+import com.thinking.machines.nafclient.*;
+import com.thinking.machines.nafcommon.*;
+public class App
+{
+public static void main(String gg[])
+{
+try
+{
+TMNAFClient tmnaf=new TMNAFClient("localhost",5000);
+System.out.printf("%d",tmnaf.process("/AddService/add",10,70));
+}catch(ApplicationException ae)
+{
+System.out.println(ae);
+}
+}
+}
+`
+
+
 
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Easy to learn & implement.
+* Programmer does not have to worry about socket connection.
+* Handle multiple requests and give accurate result.
+* Log of errors is provided in PDF format
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
+Project is finished but there are lot more features that can be added in this application.
 
 ## Contact
-Created by [@ibrahimAnis]() - feel free to contact me!
+Created by [@ibrahimAnis]() - feel free to contact me if you face any problem in configuration!
+Linkedin Profile- linkedin.com/in/ibrahimanis
