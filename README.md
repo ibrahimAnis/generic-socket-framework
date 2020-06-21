@@ -131,4 +131,4 @@ Project is finished but there are lot more features that can be added in this ap
 
 ## Contact
 Created by [@ibrahimAnis]() - feel free to contact me if you face any problem in configuration!
-Linkedin Profile- linkedin.com/in/ibrahimanis
+[Linkedin Profile](https://linkedin.com/in/ibrahimanis)
