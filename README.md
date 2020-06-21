@@ -14,7 +14,7 @@
 Designing client-server based desktop application is always hectic especially writing Socket Programming code.Because in java we have to import so many modules and then create multiple instances of different socket based classes to just connect the server with client.After then we have to send the chunk of 1024 bytes.After doing all these things we could create a simple application.
 This inspired me to create a module that will save the time of programmer from writing socket programming code in Java.The programmes just have to import single module in both client and server side and they can focus on buisness logic instead of sending and receiving chunks of bytes. 
 ## Screenshots
-![Example screenshot](./screenshots/server_side.png)
+![Example screenshot]Server Side (./screenshots/server_side.png)
 
 ## Technologies
 * Java 1.10 or greater
