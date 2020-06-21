@@ -64,7 +64,8 @@ Folder Structure for Application is as follows:-
 Show examples of usage:
 
 Server Side Main.java to start server.
-`package com.library;
+```
+package com.library;
 import com.thinking.machines.nafserver.*;
 import com.thinking.machines.nafcommon.*;
 public class Main
@@ -75,11 +76,11 @@ TMNAFServer tmnafserver=new TMNAFServer();   // need to construct a parameterize
 tmnafserver.startServer();
 }
 }
-`
+```
 
 AddService.java
 
-`
+```
 package com.library.service;
 import com.thinking.machines.nafserver.annotation.*;
 @Path("/AddService")
@@ -91,11 +92,11 @@ public int add(int a,int b)
 return a+b;
 }
 }
-`
+```
 
 Client Side App.java
 
-`
+```
 package com.app;
 import com.thinking.machines.nafclient.*;
 import com.thinking.machines.nafcommon.*;
@@ -113,7 +114,7 @@ System.out.println(ae);
 }
 }
 }
-`
+```
 
 
 
