@@ -120,9 +120,9 @@ System.out.println(ae);
 
 ## Features
 * Easy to learn & implement.
-* Programmer does not have to worry about socket connection.
+* Programmer does not have to worry about socket connection and handling chunks of bytes.
 * Handle multiple requests and give accurate result.
-* Log of errors is provided in PDF format
+* Error log is provided in PDF format
 
 
 
