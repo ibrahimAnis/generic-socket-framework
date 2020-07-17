@@ -20,12 +20,11 @@ This inspired me to create a module that will save the time of programmer from w
 * Java 1.10 or greater
 
 ## Setup 
-* [Download](https://drive.google.com/drive/folders/1KPqlA9dvWa4CyF0FPudD9ZtxPzr9OdPk?usp=sharing) and copy the jar files to y
-our network based application folder
+* [Download](https://drive.google.com/drive/folders/1KPqlA9dvWa4CyF0FPudD9ZtxPzr9OdPk?usp=sharing) and copy the jar files to your application folder
  `nafclient.jar` to client folder  and `nafserver.jar` to server folder.
-* Create `package.cfg` file and mention the path of services folder in your application. For example
-   `file:/home/ibrahim/work/naf/` in Unix/Linux and `file:\c:\work\naf` in Windows
-* import packages in your code and create Main class.For more information on how to write Main class Click on below link
+* Create `package.cfg` file and mention the path of the package application. For example
+   `file:c:/work/server/src/` in Windows
+* import packages in your code and create Main class.For more information on how to write Main class checkout the implementation section below.
 * Run the Main class.
 
 ## Implementation
@@ -34,38 +33,33 @@ Folder Structure for Application is as follows:-
 
 ```
 ├── app
-   ├── iclient
+   ├── client
        ├── libs
             ├── nafclient.jar
+            ├── nafcommon.jar
        ├── src
-            ├── main
-               ├── java
-                  ├──com
-                     ├──app
-                        ├──App.java
-    ├── iserver
+           ├──com
+              ├──app
+                 ├──App.java
+    ├── server
         ├── libs
            ├── nafserver.jar
+           ├── nafcommon.jar
         ├── src
-            ├── main
-               ├── java
-                  ├──com
-                     ├──library
-                        ├──Main.java
-                        ├──service
-                           ├── AddService.java
-                           ├──SubtractService.java
-                           ├──MultiplyService.java
-        
+           ├──com
+              ├──app
+                 ├──Main.java
+                 ├──service
+                    ├── Service.java
 ```
 
 
 ## Code Examples
 Show examples of usage:
 
-Server Side Main.java to start server.
+Server Side Main.java
 ```
-package com.library;
+package com.app;
 import com.thinking.machines.nafserver.*;
 import com.thinking.machines.nafcommon.*;
 public class Main
@@ -77,22 +71,45 @@ tmnafserver.startServer();
 }
 }
 ```
+To compile type javac -classpath ..\..\..\libs\*;. Main.java
+and to run the code go to the server folder and type java -classpath libs\*;src\ com.app.Main
 
-AddService.java
+
+Service.java
 
 ```
-package com.library.service;
+package com.app.service;
 import com.thinking.machines.nafserver.annotation.*;
-@Path("/AddService")
-public class AddService
+@Path("/service")
+public class Service
 {
 @Path("/add")
 public int add(int a,int b)
 {
 return a+b;
 }
+@Path("/sub")
+public int subtract(int a,int b)
+{
+return a-b;
+}
+
+@Path("/mul")
+public int multiply(int a,int b)
+{
+return a*b;
+}
+
+@Path("/div")
+public int divide(int a,int b)
+{
+return a/b;
+}
 }
 ```
+
+To compile type javac -classpath ..\..\..\..\libs\*;. Service.java
+
 
 Client Side App.java
 
@@ -107,7 +124,10 @@ public static void main(String gg[])
 try
 {
 TMNAFClient tmnaf=new TMNAFClient("localhost",5000);
-System.out.printf("%d",tmnaf.process("/AddService/add",10,70));
+System.out.printf("%d\n",tmnaf.process("/service/add",10,70));
+System.out.printf("%d\n",tmnaf.process("/service/sub",100,70));
+System.out.printf("%d\n",tmnaf.process("/service/mul",10,70));
+System.out.printf("%d\n",tmnaf.process("/service/div",140,70));
 }catch(ApplicationException ae)
 {
 System.out.println(ae);
@@ -115,6 +135,7 @@ System.out.println(ae);
 }
 }
 ```
+To compile type javac -classpath ..\..\..\libs\*;. App.java
 
 
 
