@@ -32,7 +32,7 @@ Here we have implemented this appliation to create a simple client-server based 
 Folder Structure for Application is as follows:-
 
 ```
-├── app
+├── test-app
    ├── client
        ├── libs
             ├── nafclient.jar
