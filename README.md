@@ -135,7 +135,7 @@ System.out.println(ae);
 }
 }
 ```
-To compile type javac ```-classpath ..\..\..\libs\*;. App.java```
+To compile type ```javac -classpath ..\..\..\libs\*;. App.java```
 and to run ``` java -classpath ..\..\..\libs\*;. App```
 
 
