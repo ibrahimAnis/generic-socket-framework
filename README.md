@@ -71,8 +71,8 @@ tmnafserver.startServer();
 }
 }
 ```
-To compile type javac -classpath ..\..\..\libs\*;. Main.java
-and to run the code go to the server folder and type java -classpath libs\*;src\ com.app.Main
+To compile type ```javac -classpath ..\..\..\libs\*;. Main.java```
+and to run the code go to the server folder and type ```java -classpath libs\*;src\ com.app.Main```
 
 
 Service.java
@@ -108,7 +108,7 @@ return a/b;
 }
 ```
 
-To compile type javac -classpath ..\..\..\..\libs\*;. Service.java
+To compile type ```javac -classpath ..\..\..\..\libs\*;. Service.java```
 
 
 Client Side App.java
@@ -135,7 +135,8 @@ System.out.println(ae);
 }
 }
 ```
-To compile type javac -classpath ..\..\..\libs\*;. App.java
+To compile type javac ```-classpath ..\..\..\libs\*;. App.java```
+and to run ``` java -classpath ..\..\..\libs\*;. App```
 
 
 
