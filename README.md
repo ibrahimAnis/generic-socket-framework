@@ -28,7 +28,7 @@ This inspired me to create a module that will save the time of programmer from w
 * Run the Main class.
 
 ## Implementation
-Here we have implemented this appliation to create a simple client-server based application that can add,subtract,multiply two numbers.
+Here we have implemented this application to create a simple client-server based application that can add,subtract,multiply two numbers.
 Folder Structure for Application is as follows:-
 
 ```
